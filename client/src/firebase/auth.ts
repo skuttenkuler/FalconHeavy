@@ -1,5 +1,4 @@
 import {auth} from './firebase';
-import { PassThrough } from 'stream';
 
 //Sign Up User
 export const fbCreateUserWithEmailAndPassword = (
