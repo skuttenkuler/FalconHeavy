@@ -49,7 +49,7 @@ export class RegisterForm extends React.Component<
                     db.fbCreateUser(authUser.user.uid, username, email)
                     .then(() => {
                         this.setState(() => ({...RegisterForm.INITIAL_STATE}));
-                        history.push(routes.HOME);
+                        history.push(routes.LOGIN);
                     })
                     .catch(error => {
                         this.setState(RegisterForm.propKey("error",error));
@@ -60,16 +60,16 @@ export class RegisterForm extends React.Component<
                 });
         }
         public render() {
-            const { username, email, password1,password2, error} = this.state;
+            const { username, email, password1, password2, error} = this.state;
 
             const invalidInput = password1 !== password2 || password1 === "" || email === "" || username === "";
 
             return(
                 <form onSubmit={(event) => this.onSubmit(event)}>
-                    <input value={username} onChange={event => this.setStateWithEvent(event, "username")} type="text" placeholder="Full Name" />
+                    <input value={username} onChange={event => this.setStateWithEvent(event, "username")} type="text" placeholder="Username" />
                     <input value={email} onChange={event => this.setStateWithEvent(event, "email")} type="text" placeholder="Email Address" />
-                    <input value={password1} onChange={event => this.setStateWithEvent(event, "passwordOne")} type="password" placeholder="Password" />
-                    <input value={password2} onChange={event => this.setStateWithEvent(event, "passwordTwo")} type="password" placeholder="Confirm Password" />
+                    <input value={password1} onChange={event => this.setStateWithEvent(event, "password1")} type="password" placeholder="Password" />
+                    <input value={password2} onChange={event => this.setStateWithEvent(event, "password2")} type="password" placeholder="Confirm Password" />
                     <button disabled={invalidInput} type="submit">
                         Sign Up
                     </button>

@@ -16,7 +16,9 @@ interface InterfaceState {
 }
 
 export class LoginForm extends React.Component<
-    InterfaceProps, InterfaceState>{
+    InterfaceProps, 
+    InterfaceState
+    >{
         private static INITIAL_STATE = {
             email: "",
             password: "",

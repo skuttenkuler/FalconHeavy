@@ -3,12 +3,12 @@ import "firebase/auth";
 import "firebase/database";
 
 const config = {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOM,
-    databaseURL: process.env.DATABASE_URL,
-    projectId: process.env.PROJ_ID,
-    storageBucket: process.env.BUCKET_STORE,
-    messagingSenderId: process.env.MESSAGE,
+    apiKey: "AIzaSyDjx83mxXDkS7XdLsm1u2aIGBRhnfa4w2Y",
+    authDomain: "spacex-9af2f.firebaseapp.com",
+    databaseURL: "https://spacex-9af2f.firebaseio.com",
+    projectId: "spacex-9af2f",
+    storageBucket: "spacex-9af2f.appspot.com",
+    messagingSenderId: "485213885829",
   };
  
   firebase.initializeApp(config);

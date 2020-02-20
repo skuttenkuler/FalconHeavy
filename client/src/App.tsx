@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {firebase} from "./firebase"
 import  * as routes  from './routes/routes'
-import {Authentication} from './firebase/Authentication'
+import { Authentication } from './firebase/Authentication'
 import { Home } from './pages/Home/Home';
 import { Login } from './pages/Login/Login';
 import { Register } from './pages/Register/Register';

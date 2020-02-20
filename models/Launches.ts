@@ -1,15 +1,20 @@
 import * as mongoose from 'mongoose';
 
-const uri: string = "mongodb://localhost/spaceX"
-mongoose.connect(uri, (error:any) => {
-    if(error){
-        console.log(error.message)
-    } else{
-        console.log("Connected to database")
-    }
-})
+export interface InterfaceLaunches extends mongoose.Document {
+    number: number,
+    date: Date,
+    time: string,
+    booster: string,
+    launchSite: string,
+    payload: string,
+    payloadMass: number,
+    Orbit: string,
+    missionOutcome: string,
+    landingOutcome: string,
+}
 
-export const LaunchSchema = new mongoose.Schema({
+
+const LaunchSchema = new mongoose.Schema({
     number: {type:Number, required: true},
     date: {type:Date, required:true},
     time: {type:String, required:true},
@@ -22,5 +27,5 @@ export const LaunchSchema = new mongoose.Schema({
     landingOutcome: {type:String, required:true},
 });
 
-const Launch = mongoose.model('Launch', LaunchSchema);
+const Launch = mongoose.model<InterfaceLaunches>('Launch', LaunchSchema);
 export default Launch;
