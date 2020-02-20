@@ -1,15 +1,6 @@
 import * as mongoose from 'mongoose';
 
-const uri: string = "mongodb://localhost/spaceX"
-mongoose.connect(uri, (error:any) => {
-    if(error){
-        console.log(error.message)
-    } else{
-        console.log("Connected to database")
-    }
-})
-
-export const BoosterSchema = new mongoose.Schema({
+const BoosterSchema = new mongoose.Schema({
     number: {type:Number, required: true},
     date: {type:Date, required:true},
     time: {type:String, required:true},

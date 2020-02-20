@@ -8,12 +8,14 @@ export const Nav = () => (
     <AuthContext.Consumer>
         {authUser => (authUser ? <UserNav/> : null)}
     </AuthContext.Consumer>
-);
+)
+
 
 const UserNav = () => (
     <ul>
         <li>
             <Link to={routes.HOME}>Home</Link>
+           
         </li>
         <li>
            <LogOutBtn/>

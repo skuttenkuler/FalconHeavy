@@ -14,7 +14,7 @@ interface InterfaceState {
 }
 
 export const Authentication = (Component: any) => {
-    class userAuthentication extends Component <
+    class userAuthentication extends React.Component <
         InterfaceProps, 
         InterfaceState> {
             constructor(props: any) {

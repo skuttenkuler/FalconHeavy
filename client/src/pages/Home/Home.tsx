@@ -1,6 +1,8 @@
 import React from 'react'
-//import { db } from "../../firebase";
 import { Authorization } from '../../firebase/Authorization'
+import {Nav} from '../../components/Nav/Nav';
+//import { db } from '../../firebase';
+//import { Username } from '../../components/Username/Username';
 import Rockets from "../../components/Rockets/Rockets"
 
 class HomeComponent extends React.Component{
@@ -11,9 +13,17 @@ class HomeComponent extends React.Component{
             user: null
         };
     }
-    public render() {
+    // public componentDidMount() {
+    //     db.getUser().then(snapshot =>
+    //       this.setState(() => ({ users: snapshot.val() }))
+    //     );
+    //   }
+      public render() {
+        // const { users }: any = this.state;
         return(
             <div className="MainPage">
+                <Nav/>
+                {/* <Username users={users} /> */}
                 <h1>HOME</h1>
                 {/* welcome userName */}
                 {/* history of Space x */}

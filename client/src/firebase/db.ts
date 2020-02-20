@@ -9,4 +9,4 @@ export const fbCreateUser = (
             username
         });
     
-export const getUsers = () => db.ref("users").once("value")
+export const getUser = () => db.ref("users").once("value");
