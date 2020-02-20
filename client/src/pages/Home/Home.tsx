@@ -1,6 +1,6 @@
 import React from 'react'
 //import { db } from "../../firebase";
-import { userAuthorization } from '../../firebase/Authorization'
+import { Authorization } from '../../firebase/Authorization'
 
 
 class HomeComponent extends React.Component{
@@ -21,4 +21,4 @@ class HomeComponent extends React.Component{
 }
 export default HomeComponent;
 const authCondition = (authUser: any) => !!authUser;
-export const Home = userAuthorization(authCondition)(HomeComponent)
+export const Home = Authorization(authCondition)(HomeComponent)

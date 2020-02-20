@@ -1,7 +1,6 @@
 import React from 'react';
 import * as routes from '../../routes/routes';
 import { auth } from '../../firebase';
-import { placeholder } from '@babel/types';
 
 interface InterfaceProps {
     email?: string,

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { firebase } from '../firebase';
 import { AuthContext } from './authContext';
 
@@ -14,16 +14,19 @@ interface InterfaceState {
 }
 
 export const Authentication = (Component: any) => {
-    class userAuthentication extends Component <InterfaceProps, InterfaceState> {
-        constructor(props: any) {
-            super(props);
+    class userAuthentication extends Component <
+        InterfaceProps, 
+        InterfaceState> {
+            constructor(props: any) {
+                super(props);
 
-            this.state ={
+                this.state ={
                 authUser: null
-            };
-        }
+                };
+            }
         public componentDidMount() {
             firebase.auth.onAuthStateChanged(authUser => {
+            
                 authUser
                     ? this.setState(() => ({authUser})) 
                     : this.setState(() => ({ authUser: null}));
@@ -42,4 +45,4 @@ export const Authentication = (Component: any) => {
         }
     }
     return userAuthentication
-}
+};
