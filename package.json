@@ -2,10 +2,10 @@
   "name": "SpaceX",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.ts",
     "watch-ts": "tsc -w",
     "watch-node": "nodemon dist/app.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
@@ -31,6 +31,7 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.1",
+    "path": "^0.12.7",
     "react": "^16.12.0",
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2"

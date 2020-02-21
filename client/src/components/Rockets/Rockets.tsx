@@ -1,15 +1,24 @@
 import * as React from 'react'
 import './Rockets.css'
 import FalconList from './FalconRocketList/FalconList'
-import { Launches } from '../../../../routes/api-route';
+//import { Launches } from '../../../../routes/api-route';
 import * as bodyParser from 'body-parser';
+import * as API from '../../utils/api-routes'
 //stats
 
+// interface State = {
+
+// }
 class Rockets{
-    public launchRoutes: Launches = new Launches();
-    constructor(){
-        this.launchRoutes.routes(this.app)
-    }
+    
+    
+    // public componentDidMount(){
+    //     API.default.getLaunchData.then(
+            
+    //     )
+    // }
+    //public launchRoutes: Launches = new Launches();
+    
     render(){
 
         return(

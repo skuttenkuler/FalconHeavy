@@ -1,10 +1,8 @@
 import * as express from "express";
 import * as bodyParser from 'body-parser';
-import * as launchController from './controllers/launchController';
-import * as mongoose from 'mongoose';
-//import { Routes } from './routes/api-route';
 
-const db = require('./models')
+import * as mongoose from 'mongoose';
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -34,9 +32,13 @@ mongoose.connect(uri, (error:any) => {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/launches', launchController.allLaunches);
-app.get('boosters/:booster', launchController.getBooster);
-app.put('/launches/:launch', launchController.addLaunch);
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+} else {
+    app.use(express.static(__dirname + '/client/public/'))
+}
+
+
 
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);

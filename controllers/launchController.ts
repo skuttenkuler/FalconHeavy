@@ -1,26 +1,15 @@
 import { Request, Response } from 'express';
-import Launch from '../models/Launches';
-
+import { Launch } from '../models'
+import * as db from '../models'
 
 
 //GET ALL LAUNCHES
 export let allLaunches = (req: Request, res:Response) => {
-    let launches = Launch.find((error: any, launches: any) => {
+    let launches = db.Launch.find((error: any, launches: any) => {
         if(error){
             res.send(error)
         } else{
             res.send(launches);
-        }
-    })
-}
-
-//GET LAUNCHES BY BOOSTER
-export let getBooster = (req: Request, res: Response) => {
-    Launch.find((error: any, booster: { booster: string }) => {
-        if(error){
-            res.send(error)
-        } else{
-            res.send(booster)
         }
     })
 }
