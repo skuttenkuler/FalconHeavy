@@ -1,15 +1,14 @@
-import {Request, Response} from "express";
-import { Router } from 'express';
+import * as express from 'express';
 import * as controllers from '../controllers'
-import { Booster, Launch } from '../models';
 
 
 
-const router = Router();
+const router = express.Router();
 
 
 router.get('/launches', controllers.allLaunches);
-router.get('/boosters', controllers.getBooster);
-router.put('/launches/:launch', controllers.addLaunch);
+router.get('/rockets', controllers.allRockets)
+router.get('/launches/:launch', controllers.getRocketLaunches);
+router.get('/rockets/:rocket', controllers.getRocket);
 
-module.exports = router;
+export {router};

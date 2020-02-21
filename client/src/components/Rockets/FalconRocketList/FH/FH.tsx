@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export const FHBtn = () => {
+export const FalconHeavyBtn = () => {
     return(
     <button type="button">
         Falcon Heavy

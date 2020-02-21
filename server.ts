@@ -1,7 +1,7 @@
 import * as express from "express";
 import * as bodyParser from 'body-parser';
-
 import * as mongoose from 'mongoose';
+import { router } from "./routes/api-route";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -15,20 +15,7 @@ mongoose.connect(uri, (error:any) => {
     }
 })
 
-
-// db.Launch.create({
-//     number: 1,
-//     date: "1/24/20",
-//     time: "10pm",
-//     booster: "test",
-//     launchSite: "test",
-//     payload: "test",
-//     payloadMass: 1,
-//     Orbit: "test",
-//     missionOutcome: "test",
-//     landingOutcome: "test"
-//   }).then(data => console.log("1 item created")).catch(error => console.log(error));
-
+app.use(router)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 

@@ -1,4 +1,5 @@
 import * as mongoose from 'mongoose';
+import { Db } from 'mongodb';
 
 export interface InterfaceLaunches extends mongoose.Document {
     number: number,
@@ -17,7 +18,7 @@ export interface InterfaceLaunches extends mongoose.Document {
 const LaunchSchema = new mongoose.Schema({
     number: {type:Number, required: true},
     date: {type:Date, required:true},
-    time: {type:String, required:true},
+    time: {type:String, required:false},
     booster: {type:String, required:true},
     launchSite: {type:String, required:true},
     payload: {type:String, required:true},

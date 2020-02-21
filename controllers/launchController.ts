@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { Launch } from '../models'
+
 import * as db from '../models'
 
 
@@ -13,16 +13,13 @@ export let allLaunches = (req: Request, res:Response) => {
         }
     })
 }
-
-//ADD NEW LAUNCH
-export let addLaunch = (req: Request, res:Response) => {
-    let launch = new Launch(req.body);
-
-    launch.save((error: any) =>{
+//Get launches of specific Rockets
+export let getRocketLaunches = (req: Request, res:Response) => {
+    let rocket_launches = db.Launch.find((error: any, rocket_launches: Request['params']) => {
         if(error){
-            res.send(error);
+            res.send(error)
         } else{
-            res.send(launch)
+            res.send(rocket_launches);
         }
     })
 }
