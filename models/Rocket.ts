@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 
-export interface InterfaceBoosters extends mongoose.Document {
+export interface InterfaceRockets extends mongoose.Document {
     height:number,
     diameter:number,
     totalWidth:number, 
@@ -17,7 +17,7 @@ export interface InterfaceBoosters extends mongoose.Document {
     payloadMars:number, 
     payloadPluto:number
 }
-const BoosterSchema = new mongoose.Schema({
+const RocketSchema = new mongoose.Schema({
     height: {type:Number, required:true},
     diameter: {type:Number, required:true},
     totalWidth: {type:Number, required:true},
@@ -35,5 +35,6 @@ const BoosterSchema = new mongoose.Schema({
     payloadPluto: {type:Number, required:true}
 });
 
-const Booster = mongoose.model<InterfaceBoosters>('Booster', BoosterSchema);
-export default Booster;
+const Rocket = mongoose.model<InterfaceRockets>('Rocket', RocketSchema);
+export default Rocket;
+

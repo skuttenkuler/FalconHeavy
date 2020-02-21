@@ -1,4 +1,4 @@
-import { getBooster } from './boosterController';
-import { allLaunches, addLaunch } from './launchController';
+import { allRockets, getRocket } from './rocketController';
+import { allLaunches, getRocketLaunches} from './launchController';
 
-export {getBooster, allLaunches, addLaunch}
+export {allRockets, getRocket, allLaunches, getRocketLaunches}

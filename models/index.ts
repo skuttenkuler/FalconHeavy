@@ -1,4 +1,4 @@
-import Booster from './Booster';
+import Rocket from './Rocket';
 import Launch from './Launches';
 
-export {Booster, Launch}
+export {Rocket, Launch}
