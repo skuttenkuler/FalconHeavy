@@ -32,7 +32,7 @@ import { Rocket } from '../../reducers/RocketReducer'
 
 
      
-const Rockets : React.SFC<{}> = () => {
+const Rockets : React.FC<{}> = (props) => {
         return(
             <>
             <div className="background">
