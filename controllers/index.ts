@@ -1,4 +1,4 @@
 import { allRockets, getRocket } from './rocketController';
-import { allLaunches, getRocketLaunches} from './launchController';
+import { allLaunches, getLaunchesByRocket} from './launchController';
 
-export {allRockets, getRocket, allLaunches, getRocketLaunches}
+export {allRockets, getRocket, allLaunches, getLaunchesByRocket}

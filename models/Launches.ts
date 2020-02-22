@@ -1,5 +1,4 @@
 import * as mongoose from 'mongoose';
-import { Db } from 'mongodb';
 
 export interface InterfaceLaunches extends mongoose.Document {
     number: number,
