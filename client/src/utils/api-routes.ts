@@ -13,34 +13,20 @@ export default {
     
     getAllLaunches : () => {
         return(
-            axios.get<LaunchProps>('/launches').then(
-                (response) => {
-                    const {data} = response
-                    return data;
-                })
-                
+            axios.get<LaunchProps>('/launches')
         )
     },
     getAllRockets : () => {
         return(
-            axios.get<RocketProps>('/boosters').then(
-                (response) => {
-                    const {data} = response
-                    return data;
-                })
-                
+            axios.get<RocketProps>('/rockets')
         )
     },
-    getRocket : () => {
+    getFalconOne : () => {
         return(
-            axios.get<RocketProps>('/rockets/falon1').then(
-                (response) => {
-                    const {data} = response
-                    return data;
-                })
-                
-        )
-    }
+            axios.get<RocketProps>('/rocket/falcon1')
+            )
+        
+    },
     
 
 }

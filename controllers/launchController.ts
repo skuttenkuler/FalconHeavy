@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 
-import * as db from '../models'
+import * as db from '../models';
+
 
 
 //GET ALL LAUNCHES
@@ -14,12 +15,16 @@ export let allLaunches = (req: Request, res:Response) => {
     })
 }
 //Get launches of specific Rockets
-export let getRocketLaunches = (req: Request, res:Response) => {
-    let rocket_launches = db.Launch.find((error: any, rocket_launches: Request['params']) => {
+export let getLaunchesByRocket = (req: Request, res:Response) => {
+    console.log(req.params.rocket)
+    let rocket_launches = db.Launch.find({"rocket.rocket_id": req.params.rocket}, (error: any, rocket_launches: Request['params']) => {
         if(error){
             res.send(error)
         } else{
             res.send(rocket_launches);
         }
+
     })
+   
 }
+
