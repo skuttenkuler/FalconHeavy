@@ -1,0 +1,53 @@
+html{
+    overflow: hidden
+}
+body{
+  margin:0;  
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y:auto;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+.wrapper::before{
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image:url('../../assets/images/spaceXlaunch.jpg');
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2)
+}
+.content{
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    background: #aaaaaa
+    
+}
+
+.logo-wrapper{
+    display: flex;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    background-image: url("../../assets/images/stars.jpg");
+    background-size: cover;
+    z-index: 2;
+    position: relative;
+}
+.logo{
+    content: url("../../assets/images/logo.png");
+    width:75vw
+}

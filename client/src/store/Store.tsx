@@ -12,7 +12,7 @@ import {
 //thunk allows to write action creators that return a FUNCITON instead of an action, delay dispatch of an action or dispatch until a condition is met
 import thunk from 'redux-thunk';
 //import reducers state type
-// import {RocketReducer, RocketState} from '../reducers/RocketReducer';
+import {RocketReducer, RocketState} from '../reducers/RocketReducer';
 
 export interface StatsState {
     rocketsState: RocketState;
@@ -22,8 +22,9 @@ const rootReducer = combineReducers<StatsState>({
     rocketsState: RocketReducer,
 });
 
-export default fuction configureStore(): Store<StatsState, any> {
+export default function configureStore(): Store<StatsState, any> {
     const store = createStore(rootReducer, undefined, applyMiddleware(thunk))
+    return store;
 }
 
 
