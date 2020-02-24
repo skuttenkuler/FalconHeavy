@@ -36,11 +36,11 @@ class HomeComponent extends React.Component{
                             crewed dragon spacecraft beyond the moon.</p>
                         </div>
                     </div>
+                {/* Scroll parallax that slowly fades in Falcon logo */}
                     <div className="logo-wrapper">
                         <div className="logo"></div>
                     </div>
 
-                {/* Scroll parallax that slowly fades in Falcon logo */}
                 <Rockets/>
                 {/* stats of launches */}
                 {/* map of launches */}
