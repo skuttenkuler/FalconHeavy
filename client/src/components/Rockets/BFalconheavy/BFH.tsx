@@ -1,11 +1,10 @@
 import React from 'react';
 
 
-export const Falcon9Btn = () => {
+export const BigFalconHeavyBtn = () => {
     return(
     <button type="button">
-        Falcon 9
-        Falcon 9 
+        Big Falcon Heavy
     </button>
     )
 };

@@ -1,11 +1,14 @@
-import {Request, Response} from "express";
+import * as express from 'express';
+import * as controllers from '../controllers'
 
-export class Launches {
 
-    public route(app): void {
-        app.route('/home')
-        .get((req: Request, res: Response) => {
-            res.status(200).send({message: 'SUCCESS'})
-        })
-    }
-}
+
+const router = express.Router();
+
+
+router.get('/api//launches', controllers.allLaunches);
+router.get('/api/rockets', controllers.allRockets)
+router.get('/api/launches/:rocket', controllers.getLaunchesByRocket);
+router.get('/api/rockets/:rocket', controllers.getRocket);
+
+export {router};

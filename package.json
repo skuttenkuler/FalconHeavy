@@ -2,10 +2,10 @@
   "name": "SpaceX",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.ts",
     "watch-ts": "tsc -w",
     "watch-node": "nodemon dist/app.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
@@ -21,9 +21,10 @@
     "url": "https://github.com/skuttenkuler/SpaceX/issues"
   },
   "dependencies": {
-    "@types/jest": "^25.1.2",
-    "@types/react": "^16.9.20",
+    "@types/jest": "^25.1.3",
+    "@types/react": "^16.9.22",
     "@types/react-dom": "^16.9.5",
+    "@types/react-redux": "^7.1.7",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "concurrently": "^5.1.0",
@@ -31,9 +32,13 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.1",
+    "path": "^0.12.7",
     "react": "^16.12.0",
+    "react-redux": "^7.2.0",
     "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "homepage": "https://github.com/skuttenkuler/SpaceX#readme",
   "devDependencies": {
@@ -41,9 +46,10 @@
     "@types/mongodb": "^3.3.16",
     "@types/mongoose": "^5.7.1",
     "@types/node": "^13.7.4",
+    "@types/redux-thunk": "^2.1.0",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
     "tslint": "^6.0.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.2"
   }
 }
