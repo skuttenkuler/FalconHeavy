@@ -16,19 +16,9 @@ export const fbSignInWithEmailAndPassword = (
     ) => auth.signInWithEmailAndPassword(email,password)
 
     //Log out
-export const fbSignOut = () => auth.signOut();
+export const SignOut = () => auth.signOut();
 
     //Reset Password
 export const fbPasswordReset = (
     email: string
     ) => auth.sendPasswordResetEmail(email);
-
-    //password Change
-export const fbPasswordUpdate = async (
-    password: string
-    ) => {
-        if(auth.currentUser) {
-            await auth.currentUser.updatePassword(password);
-        }
-        throw Error("No current User")
-    };

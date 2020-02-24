@@ -1,13 +1,25 @@
-import * as React from 'react'
-import './Rockets.css'
-import * as API from '../../utils/api-routes'
 
-//import buttons
-import {FalconOneBtn} from './FalconOne/F1'
-import { Falcon9Btn } from './F9/F9'
-import { FalconHeavyBtn } from './FH/FH';
-import { BigFalconHeavyBtn } from './BFalconheavy/BFH';
-import { Rocket } from '../../reducers/RocketReducer'
+import * as React from 'react'
+
+import {AllRocketsDisplay} from './AllRocketsDisplay/AllRockets'
+import SingleRocketsDisplay from './SingleRocketsDisplay/SingleRocketsDisplay'
+
+// import './Rockets.css'
+// import FalconList from './FalconRocketList/FalconList'
+// import * as bodyParser from 'body-parser';
+// //stats
+
+const Rockets : React.FC<{}>  = () => {
+    
+        return(
+            <div>
+            <AllRocketsDisplay/>
+            <SingleRocketsDisplay/>
+            </div>
+           
+        )
+    }
+
 
 
 //stats
@@ -29,24 +41,5 @@ import { Rocket } from '../../reducers/RocketReducer'
 // }
 // }
 
-
-
-     
-const Rockets : React.FC<{}> = (props) => {
-        return(
-            <>
-            <div className="background">
-                <div className="rockets">
-                    <ul>
-                        <FalconOneBtn/>
-                        <Falcon9Btn/>
-                        <FalconHeavyBtn/>
-                        <BigFalconHeavyBtn/>
-                    </ul>
-                </div>
-            </div>
-            </>
-        )
-    }
 
 export default Rockets
