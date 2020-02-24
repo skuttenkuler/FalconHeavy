@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export const F9B5Btn = () => {
+export const Falcon9Btn = () => {
     return(
     <button type="button">
-        Falcon 9 Block 5
+        Falcon 9
     </button>
     )
 };

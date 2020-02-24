@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import * as routes from '../../routes/routes'
 import { AuthContext } from '../../firebase/authContext';
 import {LogOutBtn}  from '../LogOutBtn/LogOutBtn'
+import './Nav.css'
 
 export const Nav = () => (
     <AuthContext.Consumer>
@@ -12,15 +13,17 @@ export const Nav = () => (
 
 
 const UserNav = () => (
-    <ul>
-        <li>
+    <nav className="navbar">
+        <ul className="nav navbar-nnav">
+            <li>
             <Link to={routes.HOME}>Home</Link>
-           
-        </li>
-        <li>
-           <LogOutBtn/>
-        </li>
-    </ul>
+            </li>
+            <li>
+            <LogOutBtn/>
+            </li>
+        </ul>
+    </nav>
+  
 );
 // const NoUserNav = () => {
 //     <ul>

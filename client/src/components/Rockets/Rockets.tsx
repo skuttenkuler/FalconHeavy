@@ -1,25 +1,23 @@
-import * as React from 'react'
-import './Rockets.css'
-import FalconList from './FalconRocketList/FalconList'
-import { Launches } from '../../../../routes/api-route';
-import * as bodyParser from 'body-parser';
-//stats
+ import * as React from 'react'
 
-class Rockets{
-    public launchRoutes: Launches = new Launches();
-    constructor(){
-        this.launchRoutes.routes(this.app)
-    }
-    render(){
+import {AllRocketsDisplay} from './AllRocketsDisplay/AllRockets'
+import SingleRocketsDisplay from './SingleRocketsDisplay/SingleRocketsDisplay'
 
+// import './Rockets.css'
+// import FalconList from './FalconRocketList/FalconList'
+// import * as bodyParser from 'body-parser';
+// //stats
+
+const Rockets : React.FC<{}>  = () => {
+    
         return(
-            <div className="background">
-                <div className="rockets">
-                    <FalconList/>
-                </div>
+            <div>
+            <AllRocketsDisplay/>
+            <SingleRocketsDisplay/>
             </div>
+           
         )
     }
-}
+
 
 export default Rockets
