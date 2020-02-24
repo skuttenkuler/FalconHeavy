@@ -1,11 +1,12 @@
 import { Request, Response } from 'express';
-import Launch from '../models/Launches';
+
+import * as db from '../models';
 
 
 
 //GET ALL LAUNCHES
 export let allLaunches = (req: Request, res:Response) => {
-    let launches = Launch.find((error: any, launches: any) => {
+    let launches = db.Launch.find((error: any, launches: any) => {
         if(error){
             res.send(error)
         } else{
@@ -13,27 +14,17 @@ export let allLaunches = (req: Request, res:Response) => {
         }
     })
 }
-
-//GET LAUNCHES BY BOOSTER
-export let getBooster = (req: Request, res: Response) => {
-    Launch.find((error: any, booster: { booster: string }) => {
+//Get launches of specific Rockets
+export let getLaunchesByRocket = (req: Request, res:Response) => {
+    console.log(req.params.rocket)
+    let rocket_launches = db.Launch.find({"rocket.rocket_id": req.params.rocket}, (error: any, rocket_launches: Request['params']) => {
         if(error){
             res.send(error)
         } else{
-            res.send(booster)
+            res.send(rocket_launches);
         }
+
     })
+   
 }
 
-//ADD NEW LAUNCH
-export let addLaunch = (req: Request, res:Response) => {
-    let launch = new Launch(req.body);
-
-    launch.save((error: any) =>{
-        if(error){
-            res.send(error);
-        } else{
-            res.send(launch)
-        }
-    })
-}

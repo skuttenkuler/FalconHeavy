@@ -4,13 +4,13 @@ import * as routes from '../routes/routes';
 import { firebase } from '../firebase';
 import { AuthContext } from './authContext';
 
-interface InterfaceProps {
+interface Props {
     history?: any;
   }
   
   export const Authorization = (condition: any) => (Component: any) => {
     class userAuthorization extends React.Component<
-        InterfaceProps, {}> {
+        Props, {}> {
             public componentDidMount() {
                 firebase.auth.onAuthStateChanged(authUser => {
                     if (!condition(authUser)) {

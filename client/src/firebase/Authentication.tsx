@@ -3,20 +3,20 @@ import { firebase } from '../firebase';
 import { AuthContext } from './authContext';
 
 //set interface props expectations to 
-interface InterfaceProps {
+interface Props {
     //expect anything from the optional authUser
     authUser?: any;
 }
 //set interface state expectations to 
-interface InterfaceState {
+interface State {
      //expect anything from the optional authUser
     authUser?: any;
 }
 
 export const Authentication = (Component: any) => {
     class userAuthentication extends React.Component <
-        InterfaceProps, 
-        InterfaceState> {
+        Props, 
+        State> {
             constructor(props: any) {
                 super(props);
 
