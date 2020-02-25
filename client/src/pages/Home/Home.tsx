@@ -1,4 +1,5 @@
 import React from 'react'
+import {Provider}  from 'react-redux'
 import { Authorization } from '../../firebase/Authorization'
 import {Nav} from '../../components/Nav/Nav';
 import { WelcomeUser } from '../../components/WelcomeUser/Welcome';
@@ -6,6 +7,7 @@ import { WelcomeUser } from '../../components/WelcomeUser/Welcome';
 //import { Username } from '../../components/Username/Username';
 import Rockets from "../../components/Rockets/Rockets"
 import {Footer} from '../../components/Footer/Footer';
+import store  from '../../store/Store'
 import './Home.css'
 class HomeComponent extends React.Component{
     constructor(props: any){
@@ -23,6 +25,7 @@ class HomeComponent extends React.Component{
       public render() {
         // const { users }: any = this.state;
         return(
+            
             <div className="MainPage">
                 <Nav/>
                     <div className="logo-wrapper">
@@ -42,8 +45,9 @@ class HomeComponent extends React.Component{
                         <div className="bigOlRocket"></div>
                     </div>
                 {/* Scroll parallax that slowly fades in Falcon logo */}
-                
-                <Rockets/>
+                <Provider store={store}>
+                    <Rockets/>
+                </Provider>
                 {/* stats of launches */}
                 {/* map of launches */}
                 

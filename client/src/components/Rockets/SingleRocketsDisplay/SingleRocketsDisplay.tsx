@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FalconOneBtn } from '../F1/F1'
 import { Falcon9Btn } from '../F9/F9'
 import { FalconHeavyBtn } from '../FH/FH'
-import { BFHBtn } from '../BFalconHeavy/BFalconHeavy'
+import { BigFalconHeavyBtn } from '../BFalconheavy/BFH'
 
 const SingleRocketsDisplay : React.FC<{}> = () => {
         return(
@@ -59,7 +59,7 @@ const SingleRocketsDisplay : React.FC<{}> = () => {
                     <FalconOneBtn/>
                     <Falcon9Btn/>
                     <FalconHeavyBtn/>
-                    <BFHBtn/>
+                    <BigFalconHeavyBtn/>
                 </ul>
             </div>
         </div>

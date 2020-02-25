@@ -6,7 +6,7 @@ import HeightChart from '../../Charts/HeightChart/HeightChart'
 import DiameterChart from '../../Charts/DiameterChart/DiameterChart'
 import MassChart from '../../Charts/MassChart/MassChart'
 import './AllRockets.css'
-export const AllRocketsDisplay = () => {
+export const AllRocketsDisplay = (props: any) => {
         return (
             <div className="container display-stats">
                     <ul className="rockets-names">
@@ -17,7 +17,7 @@ export const AllRocketsDisplay = () => {
                     </ul>
                     <div className="row row-1">
                         <ul>
-                            <li><CostChart/></li>
+                            <li><CostChart {...props}/></li>
                             <li><SuccessRateChart/></li>
                             <li><TimeLineChart/></li>
                             <li><HeightChart/></li>
