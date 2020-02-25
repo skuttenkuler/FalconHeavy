@@ -1,0 +1,30 @@
+.display-stats{
+    position: relative;
+}
+.rocket-names{
+        display: block;
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+        margin: 0;
+        opacity: 1;
+        
+}
+    
+    .rocket-names li{
+        margin: 0%;
+        padding: 0%;
+        list-style: none;
+        font-family: 'rust'!important;
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+        color:black;
+        opacity: 1;
+        line-height: 40px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        transition: all .4s ease-in-out;
+    
+    }
