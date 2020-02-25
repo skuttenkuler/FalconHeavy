@@ -19,14 +19,14 @@ body{
 .wrapper::before{
     content:"";
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     top: 0;
     left: 0;
     background-image:url('../../assets/images/spaceXlaunch.jpg');
     background-size: cover;
     position: absolute;
     z-index: -1;
-    transform:translateZ(-1px) scale(2)
+    transform:translateZ(-1px) scale(2);
 }
 .content{
     margin: 0 auto;
@@ -38,7 +38,8 @@ body{
 
 .logo-wrapper{
     display: flex;
-    align-content: center;
+    justify-content: center;
+    padding-bottom:130px;
     width: 100vw;
     height: 100vh;
     padding-top: 20vh;
@@ -48,6 +49,13 @@ body{
     position: relative;
 }
 .logo{
-    content: url("../../assets/images/logo.png");
-    width:75vw
+    content: url("../../assets/images/FalconLogo.png");
+    width:75vw;
+   
+}
+.bigOlRocket{
+    position: fixed;
+    content: url("../../assets/images/Rocket.png");
+    width:15vw;  
+
 }
