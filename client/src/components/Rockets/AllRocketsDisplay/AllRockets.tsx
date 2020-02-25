@@ -5,11 +5,11 @@ import TimeLineChart from '../../Charts/TimelineChart/TimelineChart'
 import HeightChart from '../../Charts/HeightChart/HeightChart'
 import DiameterChart from '../../Charts/DiameterChart/DiameterChart'
 import MassChart from '../../Charts/MassChart/MassChart'
-
+import './AllRockets.css'
 export const AllRocketsDisplay = () => {
         return (
             <div className="container display-stats">
-                    <ul>
+                    <ul className="rockets-names">
                         <li>-Falcon 1-</li>
                         <li>-Falcon 9-</li>
                         <li>-Falcon Heavy-</li>
