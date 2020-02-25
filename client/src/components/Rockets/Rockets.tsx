@@ -12,11 +12,15 @@ import SingleRocketsDisplay from './SingleRocketsDisplay/SingleRocketsDisplay'
 const Rockets : React.FC<{}>  = () => {
     
         return(
+
             <div>
-            <AllRocketsDisplay/>
+        
+                <AllRocketsDisplay/>
+            
             <SingleRocketsDisplay/>
             </div>
            
+
         )
     }
 
