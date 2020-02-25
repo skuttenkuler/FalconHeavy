@@ -5,6 +5,7 @@ import { WelcomeUser } from '../../components/WelcomeUser/Welcome';
 //import { db } from '../../firebase';
 //import { Username } from '../../components/Username/Username';
 import Rockets from "../../components/Rockets/Rockets"
+import {Footer} from '../../components/Footer/Footer';
 import './Home.css'
 class HomeComponent extends React.Component{
     constructor(props: any){
@@ -24,7 +25,10 @@ class HomeComponent extends React.Component{
         return(
             <div className="MainPage">
                 <Nav/>
-                <div className="wrapper">
+                    <div className="logo-wrapper">
+                        <div className="logo"></div>
+                    </div>
+                    <div className="wrapper">
                     <WelcomeUser/>
                     {/* <Username users={users} /> */}
                         <div className="jumbotron content">
@@ -35,16 +39,15 @@ class HomeComponent extends React.Component{
                             SpaceX's key breakthrough in space travel cost is resusablility by rockets having the ability to launch and land. Currently SpaceX is working on sending privately
                             crewed dragon spacecraft beyond the moon.</p>
                         </div>
+                        <div className="bigOlRocket"></div>
                     </div>
-                    <div className="logo-wrapper">
-                        <div className="logo"></div>
-                    </div>
-
                 {/* Scroll parallax that slowly fades in Falcon logo */}
+                
                 <Rockets/>
                 {/* stats of launches */}
                 {/* map of launches */}
-
+                
+            <Footer/>
             </div>
         )
     }
