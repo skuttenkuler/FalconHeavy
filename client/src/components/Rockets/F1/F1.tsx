@@ -1,9 +1,11 @@
 import React from 'react';
 
-
-export const FalconOneBtn = () => {
+interface Props {
+    onClick(): void,
+}
+export const FalconOneBtn: React.FC<Props> = ({onClick}) => {
     return(
-    <button type="button">
+    <button onClick={onclick} type="button">
         Falcon One
     </button>
     )

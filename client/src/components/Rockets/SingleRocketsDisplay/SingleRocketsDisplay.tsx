@@ -4,7 +4,65 @@ import { Falcon9Btn } from '../F9/F9'
 import { FalconHeavyBtn } from '../FH/FH'
 import { BigFalconHeavyBtn } from '../BFalconheavy/BFH'
 
+
+export interface Rocket{
+    engines: {
+        number: number,
+        type: string,
+        propellant_1: string,
+        propellant_2:string,
+        thrust_sea_level: {
+            kN: number,
+            Ibf: number
+        }
+        thrust_vaccum: {
+            kN: number,
+            Ibf: number
+        }
+    }
+    landing_legs: {
+        number: number,
+        material: string
+    }
+    first_stage: {
+        reuseable: boolean,
+        engines: number,
+        fuel_amount_tons: number,
+        burn_time_sec: number,
+        thrust_sea_level: {
+            kN: number,
+            Ibf: number
+        }
+        thrust_vaccum: {
+            kN: number,
+            Ibf: number
+        }
+    }
+    second_stage: {
+        engines: number,
+        fuel_amount_tons: number,
+        burn_time_sec: number,
+        thrust: {
+            kN: number,
+            Ibf: number
+        }
+        
+    }
+    description: string
+}; 
+
+
 const SingleRocketsDisplay : React.FC<{}> = () => {
+//    console.log(state)
+//     React.useEffect(() =>{
+//         Axios
+//         .get('./api/rockets/falcon9')
+//         .then((data:any) => {
+//             dispatch(data, 'GET_F9')
+//         })
+//         .catch(err => console.log(err)
+//         )
+//     });
         return(
         <div className="rockets-background">
             <div className="rocket-stats">
@@ -56,7 +114,7 @@ const SingleRocketsDisplay : React.FC<{}> = () => {
             </div>
             <div className="rockets">
                 <ul>
-                    <FalconOneBtn/>
+                    <FalconOneBtn onClick={FalconOneBtn}/>
                     <Falcon9Btn/>
                     <FalconHeavyBtn/>
                     <BigFalconHeavyBtn/>
