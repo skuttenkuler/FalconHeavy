@@ -3,12 +3,13 @@ import {Provider}  from 'react-redux'
 import { Authorization } from '../../firebase/Authorization'
 import {Nav} from '../../components/Nav/Nav';
 import { WelcomeUser } from '../../components/WelcomeUser/Welcome';
-//import { db } from '../../firebase';
-//import { Username } from '../../components/Username/Username';
 import Rockets from "../../components/Rockets/Rockets"
 import {Footer} from '../../components/Footer/Footer';
-import store  from '../../store/Store'
+import store  from '../../store/store'
 import './Home.css'
+
+
+
 class HomeComponent extends React.Component{
     constructor(props: any){
         super(props);

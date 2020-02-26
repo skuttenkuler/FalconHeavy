@@ -1,7 +1,33 @@
 import { Reducer } from 'redux';
 import {RocketActions, RocketActionTypes } from '../actions/RocketActions';
+import { act } from 'react-dom/test-utils';
 
 //define Rocket
+const RocketState: Rocket = {
+    first_flight: "string",
+    height: 123,
+    diameter: 123,
+    mass: 123,
+    first_stage: {
+        reuseable: true,
+        engines: 123,
+        fuel_amount_tons: 123,
+        burn_time_sec: 123,
+        thrust_sea_level_kn: 123,
+        thrust_vaccum_kn: 123,
+    },
+    second_stage: {
+        engines: 123,
+        fuel_amount_tons: 123,
+        burn_time_sec: 123,
+        thrust_kn: 123,
+        
+    },
+    landing_legs: 123,
+    description: "string"
+    } 
+
+
 export interface Rocket{
         first_flight: string,
         height: number,
@@ -25,21 +51,13 @@ export interface Rocket{
         landing_legs: number,
         description: string
         } 
-//define Rocket state
-export interface RocketState {
-    readonly rocket: Rocket[];
-};
-const INITIAL_ROCKET_STATE: RocketState ={
-    rocket:[],
-};
 
-export const RocketReducer: Reducer<RocketState, RocketActions> = (
-    state = INITIAL_ROCKET_STATE,
-    action ) => {
+
+export const RocketReducer = (state: Rocket = RocketState, action: RocketActions) : Rocket {
         switch (action.type) {
-            case RocketActionTypes.GET_ALL:{
+            case RocketActionTypes.GET_F1:{
                 return {
-                    ...state, rocket: action.rockets,
+                    ...state, rocket: rocket,
                 };
             }
             default:

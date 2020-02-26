@@ -1,24 +1,32 @@
-
 import * as React from 'react'
-
+import { Dispatch } from 'react';
+import {compose} from 'redux';
+import {connect, Provider} from 'react-redux'
 import {AllRocketsDisplay} from './AllRocketsDisplay/AllRockets'
 import SingleRocketsDisplay from './SingleRocketsDisplay/SingleRocketsDisplay'
-
+import store from '../../store/store'
+import * as Actions from '../../actions/RocketActions';
 // import './Rockets.css'
 // import FalconList from './FalconRocketList/FalconList'
 // import * as bodyParser from 'body-parser';
 // //stats
 
-const Rockets : React.FC<{}>  = () => {
+const mapDispatchToProps = (dispatch: Dispatch<any>) => {
+    return {
+        onClick: () => dispatch(Actions.getFalcon1)
+    }
+}
+
+
+var Rockets : React.FC<{}>  = () => {
     
         return(
 
-            <div>
-        
+            <Provider store={store}>
                 <AllRocketsDisplay/>
+                <SingleRocketsDisplay/>
+            </Provider>
             
-            <SingleRocketsDisplay/>
-            </div>
            
 
         )
@@ -46,4 +54,4 @@ const Rockets : React.FC<{}>  = () => {
 // }
 
 
-export default Rockets
+export default Rockets = compose(connect(mapDispatchToProps))(Rockets)
