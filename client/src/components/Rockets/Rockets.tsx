@@ -9,6 +9,7 @@ import * as container from "../../utils/container/container"
 
 export const Rockets : React.FC = () => {
     let getRocket = container.mapDispatchToProps
+   
         return(
 
             <Provider store={store}>

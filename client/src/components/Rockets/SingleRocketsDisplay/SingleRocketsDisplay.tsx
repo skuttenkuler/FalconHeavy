@@ -49,7 +49,7 @@ export interface Props {
 //     description: string;
 // }
 click: any;
-   
+
 }; 
 
 
@@ -115,7 +115,7 @@ export const SingleRocketsDisplay : React.FC<Props> = ({ click }) => {
             </div>
             <div className="rockets">
                 <ul className="rocket-buttons">
-                    <button onClick={click} type="button">Falcon One</button>
+                    <button onClick={ click} type="button">Falcon One</button>
                     <button type="button">Falcon 9</button>
                     <button type="button">Falcon Heavy</button>
                     <button type="button">Big Falcon Heavy</button>
