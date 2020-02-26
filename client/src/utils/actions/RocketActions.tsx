@@ -36,9 +36,12 @@ export interface GetBigFalconHeavy {
 //combine actiontype into one ref
 export type RocketActions = GetAllRockets | GetFalcon1 | GetFalcon9 | GetFalconHeavy | GetBigFalconHeavy;
 //GET ALL ACTION of promise to return type, state, param type and action type
+
+
 export const getAllRockets: ActionCreator<
 //type ThunkAction<R, S, E, A extends Action<any>> = (dispatch: ThunkDispatch<S, E, A>, getState: () => S, extraArgument: E) => R
     ThunkAction<Promise<any>, Rocket, null, GetAllRockets >> = () => {
+        console.log("get_all")
         return async( dispatch: Dispatch) => {
             try {
                 const response = await axios.get('/api/rockets');
@@ -54,10 +57,11 @@ export const getAllRockets: ActionCreator<
     export const getFalcon1: ActionCreator<
     //type ThunkAction<R, S, E, A extends Action<any>> = (dispatch: ThunkDispatch<S, E, A>, getState: () => S, extraArgument: E) => R
         ThunkAction<Promise<any>, Rocket, null, GetFalcon1 >> = () => {
+            console.log("get_f1")
             return async( dispatch: Dispatch) => {
                 try {
                     const response = await axios.get('/api/rockets/5e502b5dcebb7d241b868ca4');
-                     return dispatch({ type:RocketActionTypes.GET_F1, rockets: response});
+                     return dispatch({ type:RocketActionTypes.GET_F1, rocket: response});
                 } catch (error){
                     console.log(error);
                 }
@@ -67,10 +71,11 @@ export const getAllRockets: ActionCreator<
     export const getFalcon9: ActionCreator<
     //type ThunkAction<R, S, E, A extends Action<any>> = (dispatch: ThunkDispatch<S, E, A>, getState: () => S, extraArgument: E) => R
         ThunkAction<Promise<any>, Rocket, null, GetFalcon9 >> = () => {
+            console.log("get_f9")
             return async( dispatch: Dispatch) => {
                 try {
                     const response = await axios.get('/api/rockets/5e502b5dcebb7d241b868ca3');
-                        return dispatch({ type:RocketActionTypes.GET_F9, rockets: response});
+                        return dispatch({ type:RocketActionTypes.GET_F9, rocket: response});
                 } catch (error){
                     console.log(error);
                 }
@@ -79,11 +84,12 @@ export const getAllRockets: ActionCreator<
         };
     export const getFalconHeavy: ActionCreator<
     //type ThunkAction<R, S, E, A extends Action<any>> = (dispatch: ThunkDispatch<S, E, A>, getState: () => S, extraArgument: E) => R
-        ThunkAction<Promise<any>, Rocket, null, GetFalcon9 >> = () => {
+        ThunkAction<Promise<any>, Rocket, null, GetFalconHeavy >> = () => {
+            console.log("get_fh")
             return async( dispatch: Dispatch) => {
                 try {
                     const response = await axios.get('/api/rockets/5e502b5dcebb7d241b868ca5');
-                        return dispatch({ type:RocketActionTypes.GET_F9, rockets: response});
+                        return dispatch({ type:RocketActionTypes.GET_F9, rocket: response});
                 } catch (error){
                     console.log(error);
                 }
@@ -92,11 +98,12 @@ export const getAllRockets: ActionCreator<
         };
     export const getBigFalconHeavy: ActionCreator<
     //type ThunkAction<R, S, E, A extends Action<any>> = (dispatch: ThunkDispatch<S, E, A>, getState: () => S, extraArgument: E) => R
-        ThunkAction<Promise<any>, Rocket, null, GetFalconHeavy >> = () => {
+        ThunkAction<Promise<any>, Rocket, null, GetBigFalconHeavy >> = () => {
+            console.log("get_bfr")
             return async( dispatch: Dispatch) => {
                 try {
                     const response = await axios.get('/api/rockets/5e502b5dcebb7d241b868ca6');
-                        return dispatch({ type:RocketActionTypes.GET_FH, rockets: response});
+                        return dispatch({ type:RocketActionTypes.GET_FH, rocket: response});
                 } catch (error){
                     console.log(error);
                 }

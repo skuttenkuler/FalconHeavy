@@ -1,8 +1,8 @@
 import {SingleRocketsDisplay} from '../../components/Rockets/SingleRocketsDisplay/SingleRocketsDisplay'
-import { Dispatch } from 'react';
-import {compose} from 'redux';
+
+import {compose , Dispatch} from 'redux';
 import {connect, Provider} from 'react-redux';
-import { RocketActions, RocketActionTypes } from '../actions/RocketActions'
+import { RocketActions, RocketActionTypes, getFalcon1 } from '../actions/RocketActions'
 import { Rocket} from '../reducers/RocketReducer';
 
 
@@ -32,11 +32,18 @@ import { Rocket} from '../reducers/RocketReducer';
 //     } 
 //     };
 //   };
-  
-export const mapDispatchToProps = (dispatch: Dispatch<RocketActionTypes>) => {
+
+
+export const mapDispatchToProps = (dispatch: Dispatch<any>) => {
+    console.log("37:")
+    console.log(dispatch)
     return {
-        GetFal1: () => dispatch(RocketActionTypes.GET_F1)
+        GetFal1: () => {
+            console.log("hey")
+            dispatch(RocketActionTypes.GET_F1)
+        }
     };
 }
+
 
 export const Map = compose(connect(mapDispatchToProps))(SingleRocketsDisplay);
