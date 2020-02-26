@@ -8,7 +8,7 @@ import MassChart from '../../Charts/MassChart/MassChart'
 import './AllRockets.css'
 export const AllRocketsDisplay = (props: any) => {
         return (
-            <div className="container display-stats">
+                <div>
                     <ul className="rockets-names">
                         <li>-Falcon 1-</li>
                         <li>-Falcon 9-</li>
@@ -17,7 +17,7 @@ export const AllRocketsDisplay = (props: any) => {
                     </ul>
                     <div className="row row-1">
                         <ul>
-                            <li><CostChart {...props}/></li>
+                            <li><CostChart/></li>
                             <li><SuccessRateChart/></li>
                             <li><TimeLineChart/></li>
                             <li><HeightChart/></li>

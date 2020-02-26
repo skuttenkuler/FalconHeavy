@@ -55,6 +55,7 @@ body{
 }
 .bigOlRocket{
     position: fixed;
+    z-index:2;
     content: url("../../assets/images/Rocket.png");
     width:15vw;  
 

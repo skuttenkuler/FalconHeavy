@@ -1,58 +1,59 @@
 import * as React from 'react';
-import { FalconOneBtn } from '../F1/F1'
-import { Falcon9Btn } from '../F9/F9'
-import { FalconHeavyBtn } from '../FH/FH'
-import { BigFalconHeavyBtn } from '../BFalconheavy/BFH'
-
-
-export interface Rocket{
-    engines: {
-        number: number,
-        type: string,
-        propellant_1: string,
-        propellant_2:string,
-        thrust_sea_level: {
-            kN: number,
-            Ibf: number
-        }
-        thrust_vaccum: {
-            kN: number,
-            Ibf: number
-        }
-    }
-    landing_legs: {
-        number: number,
-        material: string
-    }
-    first_stage: {
-        reuseable: boolean,
-        engines: number,
-        fuel_amount_tons: number,
-        burn_time_sec: number,
-        thrust_sea_level: {
-            kN: number,
-            Ibf: number
-        }
-        thrust_vaccum: {
-            kN: number,
-            Ibf: number
-        }
-    }
-    second_stage: {
-        engines: number,
-        fuel_amount_tons: number,
-        burn_time_sec: number,
-        thrust: {
-            kN: number,
-            Ibf: number
-        }
+import { getFalcon1, GetFalcon1 } from '../../../utils/actions/RocketActions';
+import {RocketState} from '../../../utils/reducers/RocketReducer';
+import './style.css'
+export interface Props {
+//     rocket: {
+//         engines: {
+//         number: number,
+//         type: string,
+//         propellant_1: string,
+//         propellant_2:string,
+//         thrust_sea_level: {
+//             kN: number,
+//             Ibf: number
+//         }
+//         thrust_vaccum: {
+//             kN: number,
+//             Ibf: number
+//         }
+//     }
+//     landing_legs: {
+//         number: number,
+//         material: string
+//     }
+//     first_stage: {
+//         reuseable: boolean,
+//         engines: number,
+//         fuel_amount_tons: number,
+//         burn_time_sec: number,
+//         thrust_sea_level: {
+//             kN: number,
+//             Ibf: number
+//         }
+//         thrust_vaccum: {
+//             kN: number,
+//             Ibf: number
+//         }
+//     }
+//     second_stage: {
+//         engines: number,
+//         fuel_amount_tons: number,
+//         burn_time_sec: number,
+//         thrust: {
+//             kN: number,
+//             Ibf: number
+//         }
         
-    }
-    description: string
+//     }
+//     description: string;
+// }
+click: any;
+   
 }; 
 
 
-const SingleRocketsDisplay : React.FC<{}> = () => {
+export const SingleRocketsDisplay : React.FC<Props> = ({ click }) => {
 //    console.log(state)
 //     React.useEffect(() =>{
 //         Axios
@@ -69,10 +70,10 @@ const SingleRocketsDisplay : React.FC<{}> = () => {
                 <h1>Rocket Name</h1>
                 <ul className="engines">
                     <h4>Engines</h4>
-                    <li>Number: 1</li>
-                    <li>Engine Type: Merlin</li>
-                    <li>Propellant 1: Liquid Oxygen</li>
-                    <li>Propellant 2: RP-1 kerosene</li>
+                    <li>Number: {}</li>
+                    <li>Engine Type: {}</li>
+                    <li>Propellant 1: {}</li>
+                    <li>Propellant 2: {}</li>
                     <li>Landing Legs: 2</li>
                         <ul className="engine-thrust-vaccum">
                             <p>Thrust at Sea Level:</p>
@@ -113,16 +114,15 @@ const SingleRocketsDisplay : React.FC<{}> = () => {
                 </ul>
             </div>
             <div className="rockets">
-                <ul>
-                    <FalconOneBtn onClick={FalconOneBtn}/>
-                    <Falcon9Btn/>
-                    <FalconHeavyBtn/>
-                    <BigFalconHeavyBtn/>
+                <ul className="rocket-buttons">
+                    <button onClick={click} type="button">Falcon One</button>
+                    <button type="button">Falcon 9</button>
+                    <button type="button">Falcon Heavy</button>
+                    <button type="button">Big Falcon Heavy</button>
                 </ul>
             </div>
         </div>
         );
     }
 
-export default SingleRocketsDisplay;
 
