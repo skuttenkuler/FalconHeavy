@@ -1,9 +1,10 @@
-import { Reducer } from 'redux';
+
 import {RocketActions, RocketActionTypes } from '../actions/RocketActions';
-import { act } from 'react-dom/test-utils';
+
 
 //define Rocket
-const RocketState: Rocket = {
+export const RocketState: Rocket = {
+    rocket:[],
     first_flight: "string",
     height: 123,
     diameter: 123,
@@ -29,6 +30,7 @@ const RocketState: Rocket = {
 
 
 export interface Rocket{
+        rocket: Rocket[],
         first_flight: string,
         height: number,
         diameter: number,
@@ -53,11 +55,11 @@ export interface Rocket{
         } 
 
 
-export const RocketReducer = (state: Rocket = RocketState, action: RocketActions) : Rocket {
+export const RocketReducer = (state: Rocket = RocketState, action: RocketActions) : Rocket => {
         switch (action.type) {
             case RocketActionTypes.GET_F1:{
                 return {
-                    ...state, rocket: rocket,
+                    ...state, rocket: action.rockets,
                 };
             }
             default:

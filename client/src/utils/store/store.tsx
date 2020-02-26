@@ -3,7 +3,7 @@ import {
     //1) Applies middleware to dispatch method of the Redux Store
     applyMiddleware,
     //2) combineReducer merges reducers to one
-    //combineReducers,
+    combineReducers,
     //3) createStore creates Redux store that holds state tree
     createStore,
     //4) Store is TS type used for store
@@ -14,14 +14,15 @@ import thunk from 'redux-thunk';
 //import reducers state type
 import {RocketReducer, RocketState} from '../reducers/RocketReducer';
 
-export interface StatsState {
-    rocketsState: RocketState;
-}
 
-// const rootReducer = combineReducers<StatsState>({
-//     rocketsState: RocketReducer,
-// });
-const store = createStore(RocketReducer, undefined, applyMiddleware(thunk))
+
+const reducers = combineReducers({
+    rocket: RocketReducer,
+});
+
+export type AppState = ReturnType<typeof reducers>;
+
+const store = createStore(reducers, undefined, applyMiddleware(thunk))
 export default store
 
     

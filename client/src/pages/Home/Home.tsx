@@ -1,11 +1,9 @@
 import React from 'react'
-import {Provider}  from 'react-redux'
 import { Authorization } from '../../firebase/Authorization'
 import {Nav} from '../../components/Nav/Nav';
 import { WelcomeUser } from '../../components/WelcomeUser/Welcome';
-import Rockets from "../../components/Rockets/Rockets"
+import { Rockets } from "../../components/Rockets/Rockets"
 import {Footer} from '../../components/Footer/Footer';
-import store  from '../../store/store'
 import './Home.css'
 
 
@@ -46,9 +44,8 @@ class HomeComponent extends React.Component{
                         <div className="bigOlRocket"></div>
                     </div>
                 {/* Scroll parallax that slowly fades in Falcon logo */}
-                <Provider store={store}>
+                
                     <Rockets/>
-                </Provider>
                 {/* stats of launches */}
                 {/* map of launches */}
                 
