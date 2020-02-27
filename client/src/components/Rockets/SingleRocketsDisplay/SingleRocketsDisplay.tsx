@@ -77,7 +77,7 @@ class SingleRocketsDisplay extends Component < TStateProps & TDispatchProps> {
                             <div style={{ margin: 10 }}>
                                 {asyncStatus === "INIT" && "Click the button to see a cute dog"}
                                 {asyncStatus === "LOADING" && console.log("loading")}
-                                {asyncStatus === "SUCCESS" && console.log(rocket.message)}
+                                {asyncStatus === "SUCCESS" && console.log(rocket)}
                             </div>
                         </div>
                     </div>
