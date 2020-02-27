@@ -1,0 +1,26 @@
+.login{
+    top:0;
+    height: 100%;
+    background-color: black;
+    align-content: center;
+}
+.content{
+    margin: 0 auto;
+    position: relative;
+    top:35%;
+    padding: 50px;
+    width: 40vw;
+    background: rgba(175, 175, 175,)
+    
+}
+.login-btn{
+    margin-left: 25px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.rockets-bg{
+    background-image: url("../../assets/images/Falcon9_rocket_family.svg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw
+}

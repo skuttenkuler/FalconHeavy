@@ -16,9 +16,6 @@ const UserNav = () => (
     <nav className="navbar">
         <ul className="nav navbar-nnav">
             <li>
-            <Link to={routes.HOME}>Home</Link>
-            </li>
-            <li>
             <LogOutBtn/>
             </li>
         </ul>

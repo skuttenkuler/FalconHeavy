@@ -8,9 +8,9 @@
     position: relative;
     z-index: 1;
     justify-content:center;
-    color:white
+   
 }
-.rocket-buttons li {
-    display: block;
-    margin: 0;
+.rocket-buttons > buttons{
+    background-color: crimson;
+    border: red;
 }

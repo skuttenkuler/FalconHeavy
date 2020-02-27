@@ -9,13 +9,13 @@ import './AllRockets.css'
 export const AllRocketsDisplay = (props: any) => {
         return (
                 <div>
-                    <ul className="rockets-names">
-                        <li>-Falcon 1-</li>
-                        <li>-Falcon 9-</li>
-                        <li>-Falcon Heavy-</li>
-                        <li>-Big Falcon Heavy-</li>
+                    <ul className="rocket-names">
+                        <li>Falcon 1 |</li>
+                        <li> Falcon 9 |</li>
+                        <li> Falcon Heavy |</li>
+                        <li> Big Falcon Heavy </li>
                     </ul>
-                    <div className="row row-1">
+                    <div className="row charts1">
                         <ul>
                             <li><CostChart/></li>
                             <li><SuccessRateChart/></li>
@@ -23,7 +23,7 @@ export const AllRocketsDisplay = (props: any) => {
                             <li><HeightChart/></li>
                         </ul>   
                     </div>
-                    <div className="row row-2">
+                    <div className="row charts2">
                         <ul>
                             <li><DiameterChart/></li>
                             <li><MassChart/></li>

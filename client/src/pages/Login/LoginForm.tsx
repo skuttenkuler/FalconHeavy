@@ -56,7 +56,7 @@ export class LoginForm extends React.Component<
                 <form onSubmit={event => this.onSubmit(event)}>
                     <input value={email} onChange={event => this.setStateWithEvent(event, "email")} type="text" placeholder="Email..."/>
                     <input value={password} onChange={event => this.setStateWithEvent(event, "password")} type="password" placeholder="Password..."/>
-                    <button disabled={InvalidInput} type="submit">
+                    <button className="login-btn"disabled={InvalidInput} type="submit">
                         Log In
                     </button>
                     {error && <p>error.message</p>}

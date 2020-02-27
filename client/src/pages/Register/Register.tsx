@@ -2,10 +2,10 @@ import React from 'react';
 import {Link, withRouter } from 'react-router-dom';
 import * as routes from '../../routes/routes';
 import { RegisterForm } from './RegisterForm';
-
+import './Register.css'
 const RegisterComponent = () => (
-    <div>
-        <h1>Register</h1>
+    <div className="register">
+        
         <RegisterForm/>
     </div>
 ) ;
