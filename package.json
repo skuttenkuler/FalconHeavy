@@ -2,15 +2,15 @@
   "name": "SpaceX",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
   "scripts": {
-    "build-ts": "tsc",
-    "postinstall": "npm run build-ts",
-    "start": "npm run serve",
-    "serve": "node dist/server.js",
-    "watch-node": "nodemon dist/server.js",
-    "watch-ts": "tsc -w"
+    "postinstall": "tsc -p ./src",
+    "watch": "tsc -w -p ./src",
+    "debug": "nodemon --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/index.js",
+    "docker-debug": "docker-compose up",
+    "start": "node ./dist/index.js"
   },
+  "main": "./dist/index.js",
+
   "engines": {
     "node": "8.11.4"
   },
