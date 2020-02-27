@@ -5,6 +5,7 @@ import RocketActions from '../../../redux/actions/Actions';
 import { GetConnectDispatchPropsType } from "../../../redux/utils/actionCreator";
 import { connect } from "react-redux";
 import './style.css'
+import { Rockets } from "../Rockets";
 
 type TStateProps = ReturnType<typeof mapStateToProps>;
 // needed to properly type dispatch props type
@@ -22,7 +23,7 @@ class SingleRocketsDisplay extends Component < TStateProps & TDispatchProps> {
                     <div className="rocket-stats">
                         <h1>Rocket Name</h1>
                         <ul className="engines">
-                            <h4>Engines</h4>
+                            <h4>Engines: {}</h4>
                             <li>Number: {}</li>
                             <li>Engine Type: {}</li>
                             <li>Propellant 1: {}</li>
@@ -68,14 +69,14 @@ class SingleRocketsDisplay extends Component < TStateProps & TDispatchProps> {
                     </div>
                     <div className="rockets">
                         <div className="rocket-buttons">
-                            {["Falcon1", "Falcon9", "Falcon Heavy", "Big Falcon Heavy"].map(d => (
-                                <button type="button" onClick={this.props.getRocket.bind(this, d)}>
-                                    {d}
+                            {["Falcon1", "Falcon9", "Falcon Heavy", "Big Falcon Heavy"].map(rocketButton => (
+                                <button type="button" onClick={this.props.getRocket.bind(this, rocketButton)}>
+                                    {rocketButton}
                                 </button>
                             ))}                            
                         </div>
-                            <div style={{ margin: 10 }}>
-                                {asyncStatus === "INIT" && "Click the button to see a cute dog"}
+                            <div>
+                                {asyncStatus === "INIT"}
                                 {asyncStatus === "LOADING" && console.log("loading")}
                                 {asyncStatus === "SUCCESS" && console.log(rocket)}
                             </div>
