@@ -1,0 +1,5 @@
+
+export const GET_ROCKET = "GET_ROCKET";
+export const GET_ROCKET_SUCCESS = "GET_ROCKET_SUCCESS";
+export const GET_ROCKET_ERROR = "GET_ROCKET_ERROR";
+
