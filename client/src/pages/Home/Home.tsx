@@ -1,7 +1,6 @@
 import React from 'react'
 import { Authorization } from '../../firebase/Authorization'
 import {Nav} from '../../components/Nav/Nav';
-import { WelcomeUser } from '../../components/WelcomeUser/Welcome';
 import { Rockets } from "../../components/Rockets/Rockets"
 import {Footer} from '../../components/Footer/Footer';
 import './Home.css'
@@ -31,8 +30,7 @@ class HomeComponent extends React.Component{
                         <div className="logo"></div>
                     </div>
                     <div className="wrapper">
-                    <WelcomeUser/>
-                    {/* <Username users={users} /> */}
+                    
                         <div className="jumbotron content">
                             <p>What started as a project to land a miniture greenhouse and grow plants on Mars quickely evolved into making human life Multiplanetary.
                             In 2002, Elon Musk founded SpaceX with an initial goals of reducing costs for space travel and the eventual colonization of Mars.
@@ -44,8 +42,10 @@ class HomeComponent extends React.Component{
                         <div className="bigOlRocket"></div>
                     </div>
                 {/* Scroll parallax that slowly fades in Falcon logo */}
-                
+                    
+
                     <Rockets/>
+                    
                 {/* stats of launches */}
                 {/* map of launches */}
                 

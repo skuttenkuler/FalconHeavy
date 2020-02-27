@@ -2,6 +2,7 @@ import * as express from "express";
 import * as bodyParser from 'body-parser';
 import * as mongoose from 'mongoose';
 import { router } from "./routes/api-route";
+const cors = require("cors")
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,7 +15,7 @@ mongoose.connect(uri, (error:any) => {
         console.log("Connected to database")
     }
 })
-
+app.use(cors())
 app.use(router)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));

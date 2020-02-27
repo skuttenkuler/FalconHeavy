@@ -11,8 +11,8 @@ body{
 }
 .wrapper{
     width: 100vw;
-    height: 100vh;
-    padding-top: 20vh;
+    height: 200vh;
+    margin-top: -27rem;
     box-sizing: border-box;
     transform-style: preserve-3d;
 }
@@ -43,20 +43,69 @@ body{
     width: 100vw;
     height: 100vh;
     padding-top: 20vh;
-    background-image: url("../../assets/images/stars.jpg");
-    background-size: cover;
     z-index: 2;
     position: relative;
 }
 .logo{
     content: url("../../assets/images/FalconLogo.png");
     width:75vw;
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
    
 }
 .bigOlRocket{
     position: fixed;
     z-index:2;
     content: url("../../assets/images/Rocket.png");
-    width:15vw;  
+    width:12vw;
+    margin-top: 80px;
+    margin-left: 10px;
 
 }

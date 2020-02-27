@@ -65,16 +65,19 @@ export class RegisterForm extends React.Component<
             const invalidInput = password1 !== password2 || password1 === "" || email === "" || username === "";
 
             return(
-                <form onSubmit={(event) => this.onSubmit(event)}>
-                    <input value={username} onChange={event => this.setStateWithEvent(event, "username")} type="text" placeholder="Username" />
-                    <input value={email} onChange={event => this.setStateWithEvent(event, "email")} type="text" placeholder="Email Address" />
-                    <input value={password1} onChange={event => this.setStateWithEvent(event, "password1")} type="password" placeholder="Password" />
-                    <input value={password2} onChange={event => this.setStateWithEvent(event, "password2")} type="password" placeholder="Confirm Password" />
-                    <button disabled={invalidInput} type="submit">
-                        Sign Up
-                    </button>
-                    {error && <p>{error.message}</p>}
-                </form>
+                <div className="jumbotron content">
+                    <h1>Register</h1>
+                    <form className="form" onSubmit={(event) => this.onSubmit(event)}>
+                        <input value={username} onChange={event => this.setStateWithEvent(event, "username")} type="text" placeholder="Username" />
+                        <input value={email} onChange={event => this.setStateWithEvent(event, "email")} type="text" placeholder="Email Address" />
+                        <input value={password1} onChange={event => this.setStateWithEvent(event, "password1")} type="password" placeholder="Password" />
+                        <input value={password2} onChange={event => this.setStateWithEvent(event, "password2")} type="password" placeholder="Confirm Password" />
+                        <button className="reg-btn" disabled={invalidInput} type="submit">
+                            Sign Up
+                        </button>
+                        {error && console.log(error)}
+                    </form>
+                </div>
             );
         }
 

@@ -1,0 +1,23 @@
+.register{
+    background-image: url("https://cdn.mos.cms.futurecdn.net/L868HCTDT8ueAXXrcyXoWc-1200-80.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content{
+    margin: 0 auto;
+    position: relative;
+    top:35%;
+    padding: 50px;
+    width: 40vw;
+    background: rgba(175, 175, 175,)
+    
+}
+.content h4{
+    display: flex;
+    align-self: center;
+}
+.reg-btn{
+    margin: auto 0;
+}
