@@ -5,7 +5,7 @@ import {
     INIT
   } from "../utils/actionCreator";
   import { RocketResponse } from "../models/Rocket";
-  import { AppActionObjectTypes } from "../actions/actions";
+  import { AppActionObjectTypes } from "../actions/Actions";
   
   interface Rockets {
     asyncStatus: asyncStatusTypes;

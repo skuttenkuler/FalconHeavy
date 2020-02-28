@@ -1,15 +1,15 @@
-import React from 'react'
-import CostChart from '../../Charts/CostChart/CostChart'
-import SuccessRateChart from '../../Charts/SuccessRateChart/SuccessRateChart'
-import TimeLineChart from '../../Charts/TimelineChart/TimelineChart'
-import HeightChart from '../../Charts/HeightChart/HeightChart'
-import DiameterChart from '../../Charts/DiameterChart/DiameterChart'
-import MassChart from '../../Charts/MassChart/MassChart'
+import * as React from 'react'
+//import CostChart from '../../Charts/CostChart/CostChart'
+//import SuccessRateChart from '../../Charts/SuccessRateChart/SuccessRateChart'
+//import TimeLineChart from '../../Charts/TimelineChart/TimelineChart'
+//import HeightChart from '../../Charts/HeightChart/HeightChart'
+//import DiameterChart from '../../Charts/DiameterChart/DiameterChart'
+//import MassChart from '../../Charts/MassChart/MassChart'
 import './AllRockets.css'
-export const AllRocketsDisplay = (props: any) => {
+export const AllRocketsDisplay = () => {
         return (
                 <div>
-                    <ul className="rocket-names">
+                    {/* <ul className="rocket-names">
                         <li>Falcon 1 |</li>
                         <li> Falcon 9 |</li>
                         <li> Falcon Heavy |</li>
@@ -28,7 +28,7 @@ export const AllRocketsDisplay = (props: any) => {
                             <li><DiameterChart/></li>
                             <li><MassChart/></li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
         );
     };

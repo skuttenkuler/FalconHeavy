@@ -7,25 +7,48 @@ export interface RocketResponse {
     cost_per_launch?: number;
     success_rate_pct?: number;
     first_flight?: string; 
-    first_stage_engines?: number;
-    first_stage_fuel_amount_tons?: number;
-    first_stage_burn_time_sec?: number;
-    first_stage_thrust_sea_lvl_kN?: number;
-    first_stage_thrust_sea_lvl_ibF?: number;
-    first_stage_thrust_vaccum_kN?: number;
-    first_stage_thrust_vaccum_ibF?: number;
-    second_stage_engines?: number;
-    second_stage_fuel_amount_tons?: number;
-    second_stage_burn_time_sec?: number;
-    second_stage_thrust_kN?: number;
-    second_stage_thrust_ibF?: number;
-    landing_legs_number?: number
-    landing_legs_material?: string | null
-   
-    
-    
-    
+    first_stage?:{
+        reusable?: boolean;
+        engines?: number;
+        fuel_amount_tons?: number;
+        burn_time_sec?: number;
+        thrust_sea_level?: {
+            kN?: number;
+            lbf?: number;
+            }
+        thrust_vacuum?: {
+            kN?: number;
+            lbf?: number;
+            }
+        } 
+        second_stage?: {
+            fuel_amount_tons?: number;
+            burn_time_sec?: number;
+            thrust?:{
+                kN?: number;
+                lbf?: number;
+            }
+        }
+        landing_legs?: {
+        number?: number
+        material?: string
+        },
+        description?: string;
+        rocket_name?: string;
+        engines?: {
+            number?: number;
+            type?: string;
+            layout?: string;
+            propellant_1?: string;
+            propellant_2?: string;
+            thrust_sea_level?: {
+                kN?: number;
+                lbf?: number;
+                }
+            thrust_vacuum?: {
+                kN?: number;
+                lbf?: number;
+                }
 
+        }
 }
-
-
