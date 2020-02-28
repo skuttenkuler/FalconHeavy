@@ -1,8 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import { Authorization } from '../../firebase/Authorization'
 import {Nav} from '../../components/Nav/Nav';
 import { Rockets } from "../../components/Rockets/Rockets"
-import {Footer} from '../../components/Footer/Footer';
+
 import './Home.css'
 
 
@@ -49,7 +49,6 @@ class HomeComponent extends React.Component{
                 {/* stats of launches */}
                 {/* map of launches */}
                 
-            <Footer/>
             </div>
         )
     }

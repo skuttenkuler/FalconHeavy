@@ -9,7 +9,7 @@ import {
     
   
     getRocket: createAsyncAction(
-      [types.GET_ROCKET, types.GET_ROCKET_SUCCESS, types.GET_ROCKET_ERROR],
+      [types.GET_ROCKET, types.GET_ROCKET_SUCCESS, types.GET_ROCKET_ERROR,],
       RocketApi.getRocket
     )
   };

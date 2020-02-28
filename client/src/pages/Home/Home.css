@@ -19,7 +19,7 @@ body{
 .wrapper::before{
     content:"";
     width: 100vw;
-    height: 200vh;
+    height: 350vh;
     top: 0;
     left: 0;
     background-image:url('../../assets/images/spaceXlaunch.jpg');

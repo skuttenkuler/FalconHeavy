@@ -10,7 +10,25 @@
     justify-content:center;
    
 }
-.rocket-buttons > buttons{
+.rocket-button{
     background-color: crimson;
     border: red;
+    z-index: 1;
+}
+
+.stats{ 
+    color:white;
+    list-style: none;
+}
+.first-stage{
+    list-style: none;
+}
+.first-stage-engine-thrust{
+    list-style: none;
+}
+.second-stage{
+    list-style: none;
+}
+.second-stage-engine-thrust{
+    list-style: none;
 }

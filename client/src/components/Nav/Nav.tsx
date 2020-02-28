@@ -1,6 +1,4 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import * as routes from '../../routes/routes'
+import * as React from 'react';
 import { AuthContext } from '../../firebase/authContext';
 import {LogOutBtn}  from '../LogOutBtn/LogOutBtn'
 import './Nav.css'

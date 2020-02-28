@@ -23,13 +23,13 @@ export function createAction<Type extends string, Request, Response>(
 }
 
 type API<Request,Response> = (args:Request) => Promise<Response>;
-export function createAsyncAction< Actions extends string, ActionType extends string, ActionC extends string, State, Request, Response>(
-    actions: [Actions,ActionType,ActionC], api: API<Request,Response>){
+export function createAsyncAction< Actions extends string, ActionType extends string, ActionResponse extends string, State, Request, Response>(
+    actions: [Actions,ActionType,ActionResponse], api: API<Request,Response>){
         return(
             apiArgs: Request): ThunkAction<Promise<Action<ActionType, Request | undefined, Response> | void>, State, undefined,
             | Action<Actions, Request | undefined, {}>
     | Action<ActionType, Request | undefined, Response>
-    | Action<ActionC, Request | undefined, any>
+    | Action<ActionResponse, Request | undefined, any>
   > => dispatch => {
     const [requestType, successType, errorType] = actions;
     dispatch(createAction(requestType, apiArgs, {}));
