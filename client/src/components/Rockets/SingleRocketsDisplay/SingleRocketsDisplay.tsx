@@ -35,79 +35,79 @@ class SingleRocketsDisplay extends React.Component < TStateProps & TDispatchProp
                             <div className="stats">
                             <ul className="engines">
                                <h1>{`${rocket.rocket_name}`}</h1>
-                                 <ul className="first-stage">
+                               <p>{`${rocket.description}`}</p>
+                                    <li>{`Landing Legs: ${Object(rocket)['landing_legs']['number']}`}</li>
+                                    <li>{`Material: ${Object(rocket)['landing_legs']['material']}`}</li>
+                                    <ul className="first-stage">
+
                                     <p>First Stage:</p>
-                                        <li> {`Reusable:${Object(rocket)['first_stage']['reusable']}`} </li>
-                                        <li> {`Engines:${Object(rocket)['first_stage']['engines']}`} </li>
-                                        <li> {`Fuel Amount:${Object(rocket)['first_stage']['fuel_amount_tons']} tons`} </li>
-                                        <li> {`Burn Time:${Object(rocket)['first_stage']['burn_time_sec']} seconds`} </li>
-                                        <ul className="first-stage-engine-thrust">
-                                            <p>Thrust at Sea Level:</p>
-                                                <li>{`Kilonewtons:${Object(rocket)['first_stage']['thrust_sea_level']['kN']}`} </li>
-                                                <li>{`Pound-Force:${Object(rocket)['first_stage']['thrust_sea_level']['lbf']}`}</li>
-                                            <p>Thrust in Vaccum:</p>
-                                                <li>{`Kilonewtons:${Object(rocket)['first_stage']['thrust_vacuum']['kN']}`} </li>
-                                                <li>{`Pound-Force:${Object(rocket)['first_stage']['thrust_vacuum']['lbf']}`}</li>
-                                        </ul>
+                                        <li> {`Reusable:  ${Object(rocket)['first_stage']['reusable']}`} </li>
+                                        <li> {`Engines:  ${Object(rocket)['first_stage']['engines']}`} </li>
+                                        <li> {`Fuel Amount:  ${Object(rocket)['first_stage']['fuel_amount_tons']} tons`} </li>
+                                        <li> {`Burn Time:  ${Object(rocket)['first_stage']['burn_time_sec']} seconds`} </li>
+                                        <p>Thrust at Sea Level:</p>
+                                                <li>{`Kilonewtons:  ${Object(rocket)['first_stage']['thrust_sea_level']['kN']}`} </li>
+                                                <li>{`Pound-Force:  ${Object(rocket)['first_stage']['thrust_sea_level']['lbf']}`}</li>
+                                        <p>Thrust in Vaccum:</p>
+                                                <li>{`Kilonewtons:  ${Object(rocket)['first_stage']['thrust_vacuum']['kN']}`} </li>
+                                                <li>{`Pound-Force:  ${Object(rocket)['first_stage']['thrust_vacuum']['lbf']}`}</li>
+                                        
                                 </ul> 
                                 <ul className="second-stage">
                                     <p>Second Stage:</p>
-                                    <li> {`Engines:${Object(rocket)['second_stage']['engines']}`} </li>
-                                        <li> {`Fuel Amount:${Object(rocket)['second_stage']['fuel_amount_tons']} tons`} </li>
-                                        <li> {`Burn Time:${Object(rocket)['second_stage']['burn_time_sec']} seconds`} </li>
+                                    <li> {`Engines:  ${Object(rocket)['second_stage']['engines']}`} </li>
+                                        <li> {`Fuel Amount:  ${Object(rocket)['second_stage']['fuel_amount_tons']} tons`} </li>
+                                        <li> {`Burn Time:  ${Object(rocket)['second_stage']['burn_time_sec']} seconds`} </li>
+                                        <p>Thrust:</p>
                                         <ul className="second-stage-engine-thrust">
-                                            <p>Thrust:</p>
-                                                <li>{`Kilonewtons:${Object(rocket)['second_stage']['thrust']['kN']}`} </li>
-                                                <li>{`Pound-Force:${Object(rocket)['second_stage']['thrust']['lbf']}`}</li>
+                                                <li>{`Kilonewtons:  ${Object(rocket)['second_stage']['thrust']['kN']}`} </li>
+                                                <li>{`Pound-Force:  ${Object(rocket)['second_stage']['thrust']['lbf']}`}</li>
                                         </ul>
                                 </ul>  
-                                <p> Langing Legs</p>
-                                <ul>
-                                <li>{`Landing Legs: ${Object(rocket)['landing_legs']['number']}`}</li>
-                                <li>{`Material: ${Object(rocket)['landing_legs']['material']}`}</li>
-                                </ul>
                         </ul></div>) 
                         : (
                         <div className="stats">
                         <ul className="engines">
-                        <h1>Rocket</h1>
+                        <h1>Falcon 1</h1>
+                        <p>The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.</p>
+                            <li>Landing Legs: 0</li>
+                            <li>Material: null</li>
                           <ul className="first-stage">
                              <p>First Stage:</p>
-                                 <li> Reusable: </li>
-                                 <li> Engines: </li>
-                                 <li> Fuel Amount:</li>
-                                 <li> Burn Time: </li>
+                                 <li> Reusable:  false </li>
+                                 <li> Engines:  1 </li>
+                                 <li> Fuel Amount:  44.3 tons</li>
+                                 <li> Burn Time:  169 seconds </li>
                                  <ul className="first-stage-engine-thrust">
                                      <p>Thrust at Sea Level:</p>
-                                         <li>Kilonewtons: </li>
-                                         <li>Pound-Force:</li>
+                                         <li>Kilonewtons: 420 </li>
+                                         <li>Pound-Force: 94000</li>
                                      <p>Thrust in Vaccum:</p>
-                                         <li>Kilonewtons: </li>
-                                         <li>Pound-Force</li>
+                                         <li>Kilonewtons: 480 </li>
+                                         <li>Pound-Force: 110000</li>
                                  </ul>
                          </ul> 
                          <ul className="second-stage">
                              <p>Second Stage:</p>
-                             <li> Engines:</li>
-                                 <li> Fuel Amount: </li>
-                                 <li> Burn Time: </li>
+                             <li> Engines:  1</li>
+                                 <li> Fuel Amount:  3.38 tons </li>
+                                 <li> Burn Time: 378 seconds</li>
                                  <ul className="second-stage-engine-thrust">
                                      <p>Thrust:</p>
-                                         <li>Kilonewtons:</li>
-                                         <li>Pound-Force:</li>
+                                         <li>Kilonewtons:  31</li>
+                                         <li>Pound-Force:  7000</li>
                                  </ul>
                          </ul>  
                          <p> Langing Legs</p>
                          <ul>
-                         <li>Landing Legs:</li>
-                         <li>Material:</li>
+                         
                          </ul>
                  </ul></div>)}
                     </div>
                     <div className="rockets button-wrapper">
                         
                         <div className="rocket-buttons">
-                            {["Falcon 1", "Falcon 9", "Falcon Heavy", "Big Falcon Heavy"].map(rocketButton => (
+                            {["Falcon 1", "Falcon 9", "Falcon Heavy", "Big Falcon Rocket"].map(rocketButton => (
                                 <button type="button" className="rocket-button" onClick={this.props.getRocket.bind(this, rocketButton)}>
                                     {rocketButton}
                                 </button>
@@ -116,7 +116,7 @@ class SingleRocketsDisplay extends React.Component < TStateProps & TDispatchProp
                             <div>
                                 {asyncStatus === "INIT"}
                                 {asyncStatus === "LOADING" && console.log("getting rocket...")}
-                                {asyncStatus === "SUCCESS" && console.log((rocket))}
+                                {asyncStatus === "SUCCESS" && console.log(Object(rocket)['first_stage']['burn_time_sec'])}
                             </div>
                         </div>
                     </div>

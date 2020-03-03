@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Line} from 'react-chartjs-2';
+import * as charts from 'react-chartjs-2';
 import '../chart.css'
 
 
@@ -27,7 +27,7 @@ export default class CostChart extends React.Component<any,{}>{
             return(
                 <div className="chart">
                     <h4>Cost</h4>
-                <Line data={this.data} width={50} height={25}  options={{maintainAspectRatio: false}} />
+                <charts.Line data={this.data} width={50} height={25}  options={{maintainAspectRatio: false}} />
                 </div>
             );
     };

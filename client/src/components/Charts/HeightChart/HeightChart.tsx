@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {Bar} from 'react-chartjs-2';
-
+import * as charts from 'react-chartjs-2';
 const data = {
     labels: ['Falcon 1', 'Falcon 9', 'Falcon Heavy', 'Big Falcon Heavy'],
     datasets: [
@@ -22,7 +21,7 @@ export default class HeightChart extends React.Component<{}>{
             return(
                 <div className="chart">
                     <h4>Height</h4>
-                <Bar data={data} width={50} height={25}  options={{maintainAspectRatio: false}} />
+                <charts.Bar data={data} width={50} height={25}  options={{maintainAspectRatio: false}} />
                 </div>
             );
          }

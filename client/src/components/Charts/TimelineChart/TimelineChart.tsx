@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {Line} from 'react-chartjs-2';
-
+import * as charts from 'react-chartjs-2';
     const data : {} = {
         labels: ['Falcon 1', 'Falcon 9', 'Falcon Heavy', 'Big Falcon Heavy'],
         datasets: [
@@ -33,7 +32,7 @@ export default class TimeLineChart extends React.Component<{}>{
             return(
                 <div className="chart">
                     <h4>Timeline</h4>
-                <Line data={data} width={50} height={25}  options={{maintainAspectRatio: false}} />
+                <charts.Line data={data} width={50} height={25}  options={{maintainAspectRatio: false}} />
                 </div>
             );
          }

@@ -1,27 +1,29 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-    "target": "es6",
     "module": "commonjs",
-    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "strict": true,
+    "baseUrl": "./",
+    "outDir": "build",
     "sourceMap": true,
-    "outDir": "./dist",
-    "rootDir": ".",
-    "moduleResolution": "node",
-    "jsx": "react",
     "removeComments": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": false,
+    "experimentalDecorators": true,
+    "target": "es6",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
-  
-  "exclude": ["node_modules"],
-  "include": ["./client/**/*.tsx", "./client/**/*.ts"]
+  "include": [
+    "./client/**/*.ts"
+  ],
+  "exclude": [
+    "./client/**/*.test.ts",
+    "./client/public/"
+  ]
 }
