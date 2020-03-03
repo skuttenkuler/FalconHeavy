@@ -1,6 +1,5 @@
 import * as React from 'react';
-import {Doughnut} from 'react-chartjs-2';
-
+import * as charts from 'react-chartjs-2';
 
 const data = {
     labels: ['Falcon 1', 'Falcon 9', 'Falcon Heavy', 'Big Falcon Heavy'],
@@ -26,7 +25,7 @@ export default class SuccessRateChart extends React.Component<{}>{
             return(
                 <div className="chart">
                     <h4>Success Ratio</h4>
-                <Doughnut data={data} options={{maintainAspectRatio: false}} />
+                <charts.Doughnut data={data} options={{maintainAspectRatio: false}} />
                 </div>
             );
          }

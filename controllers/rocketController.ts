@@ -23,11 +23,12 @@ export let allRockets = (req: Request, res:Response) => {
 //GET Rockets by Id
 export let getRocket = (req: Request, res: Response) => {
     console.log(req.params.rocket)
-    let rocket = db.Rocket.findById(req.params.rocket, (err: any, rocket: {_id:Request['params']}) => {
-      if (err) {
-        res.send(err);
-      } else {
-        res.send(rocket);
-      }
-    });
-  };
+    db.Rocket.find({rocket_name: req.params.rocket}, (error: any, rocket: any) => {
+      if(error){
+        res.send(error)
+    } else{
+        res.json(rocket[0]);
+    }
+    })  
+        
+};
