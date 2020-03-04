@@ -8,12 +8,14 @@
     "build-ts": "tsc",
     "postinstall": "npm run build-ts",
     "start": "node server.ts",
-    "serve":"node dist/App.js",
+    "serve": "node dist/App.js",
     "watch-ts": "tsc -w",
     "watch-node": "nodemon dist/App.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
   },
-  "engines": {"node":"12.13.0"},
+  "engines": {
+    "node": "12.13.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skuttenkuler/SpaceX.git"
@@ -35,6 +37,7 @@
     "cors": "^2.8.5",
     "create-react-app": "^3.3.1",
     "express": "^4.17.1",
+    "firebase": "^7.9.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.1",
     "path": "^0.12.7",
