@@ -1,4 +1,4 @@
-import express from "express";
+import express = require("express");
 import * as bodyParser from 'body-parser';
 import * as mongoose from 'mongoose';
 import { router } from "./routes/api-route";
