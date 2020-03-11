@@ -1,14 +1,14 @@
 const express = require("express");
-import * as bodyParser from 'body-parser';
-import * as mongoose from 'mongoose';
-import { router } from "./routes/api-route";
-const cors = require("cors")
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
+const cors = require("cors")
+const router = require('./routes/api-route.ts')
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const uri: string = "mongodb://localhost/spaceX"
-mongoose.connect(uri, (error:any) => {
+const uri: string = process.env.MONGODB_URI || "mongodb://localhost/spaceX"
+mongoose.connect(uri, (error) => {
     if(error){
         console.log(error.message)
     } else{
