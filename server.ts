@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const uri: string = process.env.MONGODB_URI || "mongodb://localhost/spaceX"
-mongoose.connect(uri, (error) => {
+mongoose.connect(uri, (error: any) => {
     if(error){
         console.log(error.message)
     } else{
