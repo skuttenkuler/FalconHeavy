@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const cors = require("cors")
-const router = require('./routes/api-route.ts')
+import {router} from "./routes/api-route"
 const app = express();
 const PORT = process.env.PORT || 3001;
 
