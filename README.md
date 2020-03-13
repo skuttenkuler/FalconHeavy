@@ -1,6 +1,7 @@
 # SpaceX
 Explore the flagship rocket of Space X, the Falcon, and compare the stats of all models of the Falcon Rocket
 
+![Alt text](./client/src/assets/images/spaceX.gif?raw=true "Preview")
 
 
 # Technologies
@@ -99,6 +100,4 @@ export const Authentication = (Component: any) => {
     - [LinkedIn](https://www.linkedin.com/in/skdev91)
     
 # References
-* [API DATA](https://docs.spacexdata.com/?version=latest)
-* [Typescript Firebase](https://github.com/morizyun/react-typescript-firebase-auth)
-* [Redux](https://github.com/ankeetmaini/react-app-redux-ts)
+* [API DB DATA](https://docs.spacexdata.com/?version=latest)
