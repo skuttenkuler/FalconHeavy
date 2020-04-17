@@ -46,6 +46,10 @@ body{
     z-index: 2;
     position: relative;
 }
+.jumbotron {
+  position: relative;
+  margin-top:100px;
+}
 .logo{
     content: url("../../assets/images/FalconLogo.png");
     width:75vw;
