@@ -104,11 +104,7 @@ class SingleRocketsDisplay extends React.Component < TStateProps & TDispatchProp
                     <div className="rockets button-wrapper">
                         
                         <div className="rocket-buttons">
-<<<<<<< HEAD
                             {["falcon1", "falcon9", "falconheavy", "starship"].map(rocketButton => (
-=======
-                            {["Falcon 1", "Falcon 9", "Falcon Heavy", "Big Falcon Rocket"].map(rocketButton => (
->>>>>>> c6680544199768b8eed04888e8241db1a8bfb5ec
                                 <button type="button" className="rocket-button" onClick={this.props.getRocket.bind(this, rocketButton)}>
                                     {rocketButton}
                                 </button>

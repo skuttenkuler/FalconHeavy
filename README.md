@@ -1,15 +1,14 @@
 # SpaceX
-Explore the flagship rocket of Space X, the Falcon, and compare the stats of all models of the Falcon Rocket
+Explore the flagship rocket of Space X, the Falcon, and compare the stats of all models of the rockets.
 
-<<<<<<< HEAD
 # Visual
 ![Alt text](./client/src/assets/images/falcon.gif?raw=true "Preview")
 
 # Deployed
 [Falcon Heavy](https://immense-beyond-39985.herokuapp.com/)
-=======
-![Alt text](./client/src/assets/images/spaceX.gif?raw=true "Preview")
->>>>>>> c6680544199768b8eed04888e8241db1a8bfb5ec
+
+
+
 
 
 # Technologies
@@ -103,18 +102,10 @@ export const Authentication = (Component: any) => {
     
 
 # Author
-<<<<<<< HEAD
 - Sam Kuttenkuler
     - [Github](https://www.github.com/skuttenkuler)
     - [LinkedIn](https://www.linkedin.com/in/skdev91)
     
 # API
 * [SpaceX API](https://docs.spacexdata.com/?version=latest)
-=======
-  Sam Kuttenkuler
-    - [Github](https://www.github.com/skuttenkuler)
-    - [LinkedIn](https://www.linkedin.com/in/skdev91)
-    
-# References
-* [API DB DATA](https://docs.spacexdata.com/?version=latest)
->>>>>>> c6680544199768b8eed04888e8241db1a8bfb5ec
+
