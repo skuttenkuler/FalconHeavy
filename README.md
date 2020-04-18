@@ -2,7 +2,7 @@
 Explore the flagship rocket of Space X, the Falcon, and compare the stats of all models of the Falcon Rocket
 
 # Visual
-![Alt text](./client/src/assets/images/falconheavy.gif?raw=true "Preview")
+![Alt text](./client/src/assets/images/falcon.gif?raw=true "Preview")
 
 # Deployed
 [Falcon Heavy](https://immense-beyond-39985.herokuapp.com/)
