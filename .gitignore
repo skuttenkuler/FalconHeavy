@@ -23,3 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 dist
+
+dock.compose.yaml
+dockerfile
+notes.txt
+tsconfig.json
+tslint.json
