@@ -99,9 +99,9 @@ export const Authentication = (Component: any) => {
     
 
 # Author
-  Sam Kuttenkuler
+- Sam Kuttenkuler
     - [Github](https://www.github.com/skuttenkuler)
     - [LinkedIn](https://www.linkedin.com/in/skdev91)
     
-# References
+# API
 * [SpaceX API](https://docs.spacexdata.com/?version=latest)
