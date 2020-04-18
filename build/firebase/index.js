@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const auth = require("./auth");
+var auth = require("./auth");
 exports.auth = auth;
-const db = require("./db");
+var db = require("./db");
 exports.db = db;
-const firebase = require("./firebase");
+var firebase = require("./firebase");
 exports.firebase = firebase;
 //# sourceMappingURL=index.js.map

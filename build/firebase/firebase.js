@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const firebase = require("firebase");
-const config = {
+var firebase = require("firebase");
+var config = {
     apiKey: "AIzaSyDjx83mxXDkS7XdLsm1u2aIGBRhnfa4w2Y",
     authDomain: "spacex-9af2f.firebaseapp.com",
     databaseURL: "https://spacex-9af2f.firebaseio.com",

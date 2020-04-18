@@ -1,1 +1,1 @@
-{"version":3,"file":"authContext.js","sourceRoot":"","sources":["../../client/src/firebase/authContext.ts"],"names":[],"mappings":";;AAAA,+BAA+B;AAElB,QAAA,WAAW,GAAG,KAAK,CAAC,aAAa,CAAC,IAAI,CAAC,CAAA"}
+{"version":3,"file":"authContext.js","sourceRoot":"","sources":["../../client/src/firebase/authContext.ts"],"names":[],"mappings":";;AAAA,6BAA+B;AAElB,QAAA,WAAW,GAAG,KAAK,CAAC,aAAa,CAAC,IAAI,CAAC,CAAA"}

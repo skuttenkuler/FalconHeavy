@@ -2,29 +2,29 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function createAction(type, request, response) {
     return {
-        type,
+        type: type,
         payload: {
-            request,
-            response
+            request: request,
+            response: response
         }
     };
 }
 exports.createAction = createAction;
 function createAsyncAction(actions, api) {
-    return (apiArgs) => dispatch => {
-        const [requestType, successType, errorType] = actions;
+    return function (apiArgs) { return function (dispatch) {
+        var requestType = actions[0], successType = actions[1], errorType = actions[2];
         dispatch(createAction(requestType, apiArgs, {}));
         return Promise.resolve(api(apiArgs))
-            .then(response => {
-            const action = createAction(successType, apiArgs, response);
+            .then(function (response) {
+            var action = createAction(successType, apiArgs, response);
             dispatch(action);
             return action;
         })
-            .catch(err => {
-            const action = createAction(errorType, apiArgs, err);
+            .catch(function (err) {
+            var action = createAction(errorType, apiArgs, err);
             Promise.reject(dispatch(action));
         });
-    };
+    }; };
 }
 exports.createAsyncAction = createAsyncAction;
 exports.INIT = "INIT";
