@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -29,3 +30,10 @@ dockerfile
 notes.txt
 tsconfig.json
 tslint.json
+=======
+node_modules
+.DS_Store
+.env
+
+dist
+>>>>>>> c6680544199768b8eed04888e8241db1a8bfb5ec
