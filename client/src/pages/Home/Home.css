@@ -8,6 +8,7 @@ body{
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y:auto;
+  background: #000000;
 }
 .wrapper{
     width: 100vw;
